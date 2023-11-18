@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  width: 100%;
   background-image: url("../images/wall.png");
   background-position: center;
+  overflow: hidden;
 }
 
 .menu {
@@ -26,7 +28,7 @@
   justify-content: center;
 }
 
-.menu-lives > img{
+.menu-lives>img {
   width: 40px;
   filter: saturate(4);
   margin-right: 10px;
@@ -39,25 +41,100 @@
 
 .panel {
   margin-top: 1rem;
+  height: 100dvh;
   display: flex;
-  align-items: center;
+  gap: 5px;
   justify-content: center;
+  align-items: center;
 }
 
 
 .square {
-  height: 200px;
-  width: 200px;
-  border: 3px solid #ffffff;
+  height: 10rem;
+  width: 10rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 5px;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px)
 }
 
 .square:hover {
-  background-color: #ffffff9a;
+  background-color: #ffffff0d;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px)
 }
 
 .enemy {
   background-image: url("../images/ralph.png");
   background-size: cover;
   background-position: center;
+}
+
+.window-game--finally {
+  background-color: #cf1a1a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  transition: all ease-in-out 2s;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+
+.window-game--body {
+  width: 900px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px #a3a3a3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#reload {
+  padding: 30px;
+  border: none;
+  background-image: url(../images/wall.png);
+  cursor: pointer;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+#reload:active {
+  transform: scale(0.9);
+  transition: all 0.1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .square {
+    height: 5rem;
+    width: 6rem;
+  }
+.panel {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+}
+.window-game--body {
+  width: 95%;
+  height: 60%;
+  padding: 10px;
+}
+  h2 {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 20px;
+  }
 }
