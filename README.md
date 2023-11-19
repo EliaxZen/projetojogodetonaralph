@@ -1,5 +1,6 @@
 # projetojogodetonaralph
- Fiz esse jogo do Detona Ralph usando HTML, CSS e JavaScript.
+### Fiz esse jogo do Detona Ralph usando HTML, CSS e JavaScript.
+### <a href="https://ralphgame.netlify.app/" target="_blank">DEPLOY</a>
 # <div align="center">![ralph](https://github.com/EliaxZen/projetojogodetonaralph/assets/132005740/37135109-35bd-473e-949c-1e4b932a1987)</div>
 
 
