@@ -58,7 +58,8 @@
   margin-bottom: 5px;
   background-color: transparent;
   backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px)
+  -webkit-backdrop-filter: blur(2px);
+  user-select: none;
 }
 
 .square:hover {
